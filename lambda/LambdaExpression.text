@@ -1,0 +1,77 @@
+"
+    -> in java 1.8 lambda and Sream api was introduce
+    -> Lambda is an anonymous Function
+        - No Name
+        - No Modifier
+        - No Return Type.
+
+        //normal function                           //lambda function
+        public void fun(){                              ()->{
+            sop("Hi");          =>                          sop("Hii");
+        }                                               }
+
+
+    Benefits of Lambda:
+        -> Reduce the lines of code.
+        -> Sequential and Parallel execution support by passing 
+            behavior as an argument in methods.
+        -> To call APIs very effectively.
+        -> To write more readable, Maintainable and Concise code.
+        
+
+    Note : function programming -> send function as arguemtn in a function.
+
+
+        //normal function
+        public int sum(int a,int b){
+            return (a+b);
+        }
+
+        //lambda
+        (int a,int b)->{
+            return (a+b);
+        }
+
+    --------------------------
+    -> Important Rules of Lambda:
+        1. if the body of lambda expression contain only one statement then curly braces are optional.
+        2. Java compiler also inter the type of variable passed in argument, hence type is optional.
+                                |-> referrer automatically.
+        
+        ex:
+
+           int sum = (a,b)-> a+b;    //above function.
+
+    --------------------------
+    Functional Interface :
+        -> If the interface contains only one abstact methods then it is functional Interface.
+            Example : Runnable, Callable, Comparable etc.
+
+        -> To call lambda we require functional Interface.
+        -> Lambda is used to implement functional interface in very simple and short manner.
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"

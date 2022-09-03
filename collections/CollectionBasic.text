@@ -1,0 +1,186 @@
+"
+What is Collection Framework ?
+    -> Any group of individual objects which are represented as a
+        single unit unit is known as the collection of the objects.
+        Example : 1. Collection of Books -> single book is an object.
+                  2. Collection of movies -> single movie is an object.
+        etc...........
+
+
+What is Framework ?
+    -> A framework is a set of classes and interfaces which provide a
+        ready-made architecture.
+    example : like provide set of methods of classes.
+
+
+What is Collection Framework ?
+    -> Collection Framework is java API which provides architecture 
+        to "store" and "manipulate" group of objects.
+
+    -> API -> Pre-define classes and interfaces. -> store and manipulate.-> group of objects.
+    -> pkg : -> java.util
+        |-> Collection
+        |-> Map
+        |-> Set
+        |-> List
+        |-> Queue
+        |-> etc..
+
+    -> Provide Ready made implementation of DSA and ALGO.
+    
+
+What is Collection Hierarchy ?
+    -> Basic meaning is family of collection.
+    -> "collection" have two family.
+        |-> Collection 
+        |-> Map
+---------------------------------------------------------------------------------------------------------
+ Note: "Collection" -> it represents a gorup of objects as single unit.
+            |-> Interface : only specify method and implements its child classes.
+
+
+            "orangeColor": Interface.
+            "WhiteColor" : classes.
+
+            Iterable : 
+                |    ->it helps only for traversal by using forEach loop.
+                |    -> 
+                                                                                Only Iterator in forwar direction
+            Collection : "come into java 1.2 version".  <----Has a relation---- Iterator : collection has obect of it.
+                | -> List[Interface]                                                |-> ListIterator : for bacword direction.
+                |       -> indexed collection[0,1,2......]                          |        -> it have both feature
+                |       -> order is preserved.                                      |        -> forward & backword.
+                |       -> duplicates are allowed.                                  |        -> only list has its object.
+                | -> Set[Inteface]                                                  |        -> set can't be use it.
+                        -> Not indexed collection.                                  |
+                        -> order not preserve.                                      |
+                        -> duplicates are now allowed.                              |
+                                                                                    |
+            List : below class  implement the list inteface.    <-------Has object--|
+             |-> "ArrayList"
+             |      -> work on dynamic array.
+             |      -> low efficient than linkedlist.
+             |      -> not thread safe.
+             |      -> two object can use it at same time.
+             |-> "LinkedList"
+             |      -> Use Doubly LinkedList for implementation.
+             |-> "Vector" : "java start from 1.0, so vector is available form 1.0 version"
+                    -> It's a legacy class.
+                    -> work on dynamic array.
+                    -> it's availabe before collection so it have collection feature 
+                        as well as it's own feature so it have more featuer than other collection.
+                    -> Thread safe
+                        -> two object can't access to it at same time.
+                    ->"Stack" : child of "Vector"
+                        -> provide stack feature.
+
+            Set : below class implement the Set interface.
+             |-> "HashSet"
+             |      -> implement HashSet simple.
+             |      -> no index, no order, no duplicate.
+             |      -> "LinkedHashSet" : Child of "HashSet".
+             |          -> provide some extra feature.
+             |          -> Order, preserve and no duplicate.
+             |-> SortedSet[Inteface]    
+                    -> "TreeSet" : implement by using BST[BinarySearchTree]
+                        -> provide sorting feature.
+                        -> elements already sorted.
+                        -> by default ascending sorting for num, and sting.
+                        -> for object we need to implement custom logic
+                        
+
+
+    Note: List & Set collecte the object with different features.
+
+
+
+        Note : 
+            -> vector can be traverse also with Enumeration.
+
+----------------------------------------------------------------------------------------------------
+
+            Map : we can store data as Key : value Pair.<Object,Object>.
+             |-"HashMap"
+             |  |-> order not preserved.
+             |  |-> "LinkedHashMap"
+             |          -> keys order preserved.
+             |          -> keys duplicate not allowed.
+             |->SortedMap
+                |->"TreeMap"
+                        -> keywise sorting.
+
+
+Note : Key -> similar to Set
+           -> duplicate key are not allow.
+           -> order are not preserved.
+
+
+
+
+Lets Code...................
+    import java.util.* : pckg of collection.
+
+
+    we can create collection by two types.
+        1. Type Safe. 
+            -> same types of object/items are added to collection.
+        2. Unsafe Tyep.
+            -> different types of object/items are added to collection.
+
+        ArrayList<Integer> list = new ArrayList<>();        //type safe.
+        ArrayList list = new ArrayList();                   //unsafe type.
+
+
+        Vector<String> vector = new Vector<>();
+        verctor.addAll(names);
+
+    
+
+--------------------------------------------------------------------------
+ # HashMap Important Question :
+    
+1. Which data structure HashMap represents ?
+    -> Hash Table data structure : we can store Key:value pair.
+    -> Tn = O(n) : search element if we have the key.
+
+2. Which data structure is used to implement HashMap in java?
+    -> Array
+        - For buckets
+    -> LinkedList
+        - Mappings which land in the same bucket.
+
+3. Is HashMap thread-safe in java ?
+    -> No, HashMap is not thread safe.
+
+4. What will happen if you use HashMap in a multithreaded Java application?
+    ->when multiple threads access the HashMap then they can modify the data at same time.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"

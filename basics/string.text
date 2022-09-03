@@ -1,0 +1,208 @@
+"
+* String :
+        -> String is non-Primitive Data-types : size not fix
+        -> String is the sequence of the characters/char[]arr.
+        -> String is a class in java.
+        
+        ex:
+            public final class String extends Object implement CharSequence, Serializable, Comparable
+            {
+                ......
+                ......
+            }
+
+        -> String str = new String();   //create object of String
+        -> this is create immutable[cant modify].
+
+=> To create String, there are three classes :-
+
+    1. String
+    2. StringBuffer
+    3. StringBuilder
+
+            -> 4 ways for create string. 3 is above and one is literal
+                Ex : String str = "java";
+
+
+
+
+----------------------------------------------
+
+String Constant pool :
+    -> String Constant pool(or String literal pool) is an area in 
+       heap memory where java stores String literal values.
+    -> It is only for store string literal values.
+
+    example :
+            
+            String name = new String("java");
+                -> it create 2 object one in heap for java
+                   second in string constant pool for java.
+                   it refere by JVM internally for future use.
+                
+            String name = "java";
+                -> it create only one object in string pool.
+            
+    Note : so that by we use second method majority time.
+
+    -> The String objects present in SCP[String constant pool] are not
+       applicable for garbage collection because a reference variable
+       internally is maintained by JVM.
+    
+--------------------------------------------
+String immutability :
+    -> means unchangeable.
+    ex: 
+            String s = new String("Java");
+            s.concat(" programming"); // create new object in heap and " programming" literal in SCP.
+            s = s.concat(" programming");//s -> refer to new object of heap.
+
+
+Why String immutable :
+    -> String objects are cached in String pool. Since cached String literals 
+       are shared between mutiple persons there is always a risk, where one 
+       persons's action would affect all another persons for example, if one 
+       person changes its city from "Mohali" to "Delhi". all other persons will 
+       also get affected.
+Why String class is final :
+    -> no other one can not be extended.
+    
+-----------------------------------
+Difference between "==" and equals() method.
+
+    "==" : check reference/address 
+    equals() : check object values.//override the object equals wich comapre reference.
+
+
+
+======================================================================================
+
+StringBuffer class :
+    StringBuffer sb = new StringBuffer("Java");
+
+    -> StringBuffer objects are mutalbe.
+    -> if data does not change then use String class.
+    -> if data is requently changing like notepad,calculator we 
+       should use StringBuffer.
+
+public final class StrinfBuffer extends AbstractStringBuffer implement Serializable, CharSequence
+{
+    //4 constructors
+    StringBuffer(){}
+    StringBuffer(CharSequence seq){}
+    StringBuffer(String str){}
+    StringBuffer(int capacity){}    //oldCapacity*2+2-> increase every exceed
+
+
+
+    //methods
+    length()
+    capacity()
+    append()
+    insert()
+    reverse()
+    delete()
+    deleteCharAt()
+    replace()
+    ensureCapacity()
+    charAt()
+    indexOf()
+    lastIndexOf()
+    substring()
+    subSequence()
+    toString()
+
+}
+------------------------------------------------------------------
+Synchronization in java : guarantees that no two threads can execute a synchronized method
+    which requires the same lock simultaneously or concurrently. And thus, synchronization
+    increases waiting time for thread and effects performance of the system.
+
+Non Synchronized : mutlple thread can access method at same time.
+
+-------------------------------------------------------------------
+StringBuilder :
+    -> to overcome the problem of slow performance of StringBuffer methods, java introduce
+       StringBuilder concept in JDK 1.5 version and creates all the methods of StringBui9lder 
+       as non-synchronized which increases the mthods performance.
+
+public final class StringBuilder extends AbstractStringBuilder implements Serializable, CharSequence
+{
+    //4 constructors
+    StringBuilder(){}
+    StringBuilder(CharSequence seq){}
+    StringBuilder(String str){}
+    StringBuilder(int capacity){}
+    
+    //methods
+    length()
+    capacity()
+    append()
+    insert()
+    reverse()
+    delete()
+    deleteCharAt()
+    replace()
+    ensureCapacity()
+    charAt()
+    indexOf()
+    lastIndexOf()
+    substring()
+    subSequence()
+    toString()
+
+}
+
+=============================================================================
+Difference between String, StringBuffer and StringBuilder
+
+String :
+    -> store in heap area and string constent pool.
+    -> create immutable object
+    -> if we change value of string a lot of time it will allocate more memory.
+    -> not thread safe.//non-synchronized.
+    -> slow.
+    -> if data not changing then use it.
+
+
+
+StringBuffer :
+    -> store in heap area.
+    -> create mutable object.
+    -> consume less memeory.
+    -> all methods are synchronized so it is thread safe.
+    -> as compare to string it fast.
+    -> it data change frequently then use it.
+
+
+StringBuilder :
+    -> store in heap area.
+    -> create mutalbe object.
+    -> consume less memeory.
+    -> non synchronized method so its not thread safe.
+    -> fast as compare to StringBuffer.
+    -> it data change frequently then use it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"

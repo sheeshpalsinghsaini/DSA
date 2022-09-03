@@ -1,0 +1,54 @@
+"
+    Recursion :
+        -> When a function calls itself until a specified condition met.
+        -> that specified condition called "base condition".
+
+    example :
+
+    => 
+        O       -------------one by one steps-------------> home
+       /|\
+
+
+                void reachHome(int src,int dest){
+                    if(src==dest) sop("reached to destination");
+                    
+                    //recursive call
+                    src++;
+                    reachHome(src,dest);
+                }
+
+    =============================================================>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"

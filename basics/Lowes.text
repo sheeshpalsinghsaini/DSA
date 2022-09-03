@@ -1,0 +1,114 @@
+"
+# Java Backend Developer :
+    -> Java
+        -> this : 
+        -> supper :
+        -> final
+        -> static
+        -> finally
+        -> JDK
+        -> String               *********
+            -> String class
+            -> StringBuffer
+            -> StringBuilder
+        -> Exception            *********
+        -> oops
+            - Abstraction
+                - Abstract class
+                - Interface
+            - Polymorphism
+            - Encapsulation
+            - Inheritance
+        -> Threading           ********
+        -> 
+    -> MySQL
+        => Take a note from course.
+
+------------------------------------------------
+    1. this :
+        -> it can be used to refer current class instance variable.
+        -> this can be used to invoke current class constructor.
+
+    2. supper :
+        -> super can be used to refer immediate parent class instance variable.
+        -> super can be used to invoke immediate parent class method.
+        -> super can be used to invoke immediate parent class constructor.
+
+    3. final keyword :
+        -> final keyword in java used to restrict the user.
+        -> it can be used in many context
+            1. variable : 
+                -> we can not change the value of final variable.[it will be constant]
+                -> if try to change it, show compile time error.
+                    ex: final int speedlimit = 90
+                        speedlimit = 110;//error
+
+            2. method : 
+                -> we can not override it.
+                -> final method is inherited but we cannot override it.
+                    ex: 
+                        final void run(){
+                            sop("running");
+                        }
+                        void run(){
+                            sop("override running");    //error
+                        }
+                
+            3. class
+                -> we can not extend/inherit it.
+                ex: 
+                        final class Bike{
+
+                        }
+                        class Honda extends Bike{   // error
+                            void run(){
+                                sop("Running safely with 100kmph");
+                            }
+                        }
+------------------------------------------------
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
