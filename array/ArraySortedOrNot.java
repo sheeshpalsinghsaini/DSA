@@ -15,3 +15,13 @@ public class ArraySortedOrNot {
         
     }
 }
+
+/*
+    HP Envy X360 13
+ * Acer Swift 3
+ * Lenovo Legion 5 pro
+ * Microsoft Surface 
+ * Acer Swift x14
+ * 
+ * 
+ */
